@@ -1,0 +1,24 @@
+<h1>ユーザー情報確認</h1>
+
+<div>
+  <div>お名前:</div>
+  <div><%= @user['name'] %></div>
+  <br>
+  <div>メールアドレス:</div>
+  <div><%= @user['email'] %></div>
+  <br>
+  <div>郵便番号:</div>
+  <div><%= @user['zipcode'] %></div>
+  <br>
+  <div>住所:</div>
+  <div><%= @address %></div>
+  <div><%= @user['address2'] %></div>
+  <br>
+  <div>お支払い方法:</div>
+  <div><%= @payment %></div>
+  <br>
+</div>
+
+<form action="/complete" method="post">
+  <input type="submit" value="完了">
+</form>

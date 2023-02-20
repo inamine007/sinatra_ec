@@ -1,0 +1,14 @@
+<h1>カート内確認</h1>
+
+<div class="product_flex">
+  <% @cart.each do |cart| %>
+    <div>
+      <img src="/images/<%= cart['image'] %>" alt="">
+    </div>
+    <p><%= cart['name'] %></p>
+    <p><%= cart['content'] %></p>
+    <p><%= cart['price'] %>円</p>
+  <% end %>
+</div>
+<a href="/">買い物を続ける</a>
+<a href="/user_conf">進む</a>

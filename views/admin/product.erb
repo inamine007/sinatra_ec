@@ -1,0 +1,23 @@
+<h1>商品詳細</h1>
+
+<div class="product_flex">
+  <div>
+    <img src="/images/<%= @product['image'] %>" alt="">
+  </div>
+  <div>
+    <div>商品名：</div>
+    <div><%= @product['name'] %></div>
+    <br>
+    <div>商品説明：</div>
+    <div><%= @product['description'] %></div>
+  </div>
+</div>
+
+<div>
+  <% @variation.each do |var| %>
+    <div class="variation_box">
+      <p><%= var['content'] %></p>
+      <p><%= var['price'] %>円</p>
+    </div>
+  <% end %>
+</div>

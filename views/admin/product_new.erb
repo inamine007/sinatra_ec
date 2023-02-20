@@ -1,0 +1,35 @@
+<h1>商品登録</h1>
+
+<div>
+  <form action="/products" method="post" enctype="multipart/form-data">
+    <div>
+      <label for="name">商品名: </label>
+      <input type="text" name="name" id="name" required>
+    </div>
+    <div>
+      <label for="description">説明文: </label>
+      <input type="text" name="description" id="description" required>
+    </div>
+    <div>
+      <label for="img">画像: </label>
+      <input type="file" name="img" id="img" required>
+    </div>
+    <h2>バリエーション</h2>
+    <div id="var_group">
+      <div id="var_form_0">
+        <div>
+          <label for="var_content_0">内容: </label>
+          <input type="text" name="var_content_0" id="var_content_0" required>
+        </div>
+        <div>
+          <label for="var_price_0">値段: </label>
+          <input type="number" name="var_price_0" id="var_price_0" required>
+        </div>
+      </div>
+    </div>
+    <button onClick="appendForm()">追加</button>
+    <div>
+      <input type="submit" value="登録">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<h1>カート</h1>
+
+<div class="product_flex">
+  <% @cart.each do |cart| %>
+    <div>
+      <img src="/images/<%= cart['image'] %>" alt="">
+    </div>
+    <p><%= cart['name'] %></p>
+    <p><%= cart['content'] %></p>
+    <p><%= cart['price'] %>円</p>
+  <% end %>
+</div>
+
+<a href="/product_conf">買う</a>

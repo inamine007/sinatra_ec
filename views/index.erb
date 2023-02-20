@@ -1,0 +1,13 @@
+<h1>商品一覧</h1>
+
+<div class="product_group">
+  <% @products.each do |prod| %>
+    <div class="product_box">
+      <a href="/product/<%= prod['id'] %>">
+        <img src="/images/<%= prod['image'] %>" alt="">
+        <h2><%= prod['name'] %></h2>
+        <p><%= prod['description'] %></p>
+      </a>  
+    </div>
+  <% end %>
+</div>

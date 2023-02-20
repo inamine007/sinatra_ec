@@ -1,0 +1,45 @@
+<h1>ユーザー登録</h1>
+
+<div>
+  <form action="/register" method="post">
+    <div>
+      <label for="name">お名前: </label>
+      <input type="text" name="name" id="name" required>
+    </div>
+    <div>
+      <label for="zipcode">郵便番号(ハイフン有): </label>
+      <input type="text" name="zipcode" id="zipcode" maxlength="8" minlength="8" required>
+    </div>
+    <div>
+      <label for="address1">都道府県: </label>
+      <select name="address1" id="address1">
+        <% @prefectures.each do |key, value| %>
+          <option value="<%= value %>"><%= key %></option>
+        <% end %>
+      </select>
+    </div>
+    <div>
+      <label for="address2">住所: </label>
+      <input type="text" name="address2" id="address2" required>
+    </div>
+    <div>
+      <label for="payment">支払い方法: </label>
+      <select name="payment" id="payment">
+        <% @payment_methods.each do |key, value| %>
+          <option value="<%= value %>"><%= key %></option>
+        <% end %>
+      </select>
+    </div>
+    <div>
+      <label for="email">メールアドレス: </label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+      <label for="password">パスワード: </label>
+      <input type="password" name="password" id="password" required>
+    </div>
+    <div>
+      <input type="submit" value="登録">
+    </div>
+  </form>
+</div>

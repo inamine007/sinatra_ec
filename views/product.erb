@@ -1,0 +1,27 @@
+<h1>商品詳細</h1>
+
+<div class="product_flex">
+  <div>
+    <img src="/images/<%= @product['image'] %>" alt="">
+  </div>
+  <div>
+    <div>商品名：</div>
+    <div><%= @product['name'] %></div>
+    <br>
+    <div>商品説明：</div>
+    <div><%= @product['description'] %></div>
+  </div>
+</div>
+
+<div>
+  <form action="/cart" method="post">
+    <% @variation.each do |var| %>
+      <div class="variation_box">
+        <p><%= var['content'] %></p>
+        <p><%= var['price'] %>円</p>
+        <input type="radio" name="variation" value="<%= var['id'] %>">
+      </div>
+    <% end %>
+    <input type="submit" value="カートに入れる">
+  </form>
+</div>
